@@ -8,11 +8,13 @@ This is bare minimum build and deploymemnt system which can be integrated with J
 
 This CI system designed keep in mind  for multiple developer and there different branch.
 
-####Build 
-bash  build_script.sh <git branch > <exposed_port_for_application>
-bash build_script.sh master 8000
+##Build 
 
-╰─$ bash build_script.sh master 8000
+`bash  build_script.sh <git branch > <exposed_port_for_application>`
+`bash build_script.sh master 8000`
+
+`╰─$ bash build_script.sh master 8000`
+
 Running  Test  Cases
 ...
 ----------------------------------------------------------------------
@@ -74,15 +76,15 @@ d9ff549177a9: Layer already exists
 tradebyte-master-d2cac56b1f4573fc5bd7b7a31b4167ba44a68395: digest: sha256:55a194c1d3f71abc198962ecb0a70c8010fa6e17b3309f8f2c871d7ed825055a size: 1995
 
 
-container imgae 
-<repository><git-branch><git-hash>
-bpain2010/apps:tradebyte-master-d2cac56b1f4573fc5bd7b7a31b4167ba44a68395
+##container imgae 
+`<repository><git-branch><git-hash>`
+`bpain2010/apps:tradebyte-master-d2cac56b1f4573fc5bd7b7a31b4167ba44a68395`
 
-####Deploy
+##Deploy
 
 Here Ansible has been used to deploy project in the developement environemnt.  Here as per different branch we have different appplication running.
 
-ansible-playbook  -i hosts  playbook.yml  --private-key=~/Downloads/introday-candidate_2019-04-18.pem -u ubuntu  -e "image_name=bpain2010/apps:tradebyte-master-d2cac56b1f4573fc5bd7b7a31b4167ba44a68395" -e "apps_name=hellob" -e "apps_ports=8000" -e "published_port=8000"
+`ansible-playbook  -i hosts  playbook.yml  --private-key=~/Downloads/introday-candidate_2019-04-18.pem -u ubuntu  -e "image_name=bpain2010/apps:tradebyte-master-d2cac56b1f4573fc5bd7b7a31b4167ba44a68395" -e "apps_name=hellob" -e "apps_ports=8000" -e "published_port=8000"`
 
 
 
