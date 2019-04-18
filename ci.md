@@ -1,7 +1,7 @@
 # TradeByte CI System
 
 ## Intorduction
-This is bare minimum build and deploymemnt system which can be integrated with Jenkins/ circle ci and etc . This is a concept
+This is a bare minimum build and deploymemnt system which can be integrated with Jenkins/ circle ci / Tarvis etc . This implementation is based on a concept.
 
 
 ## How it works
