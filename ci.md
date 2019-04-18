@@ -89,8 +89,10 @@ tradebyte-master-d2cac56b1f4573fc5bd7b7a31b4167ba44a68395: digest: sha256:55a194
 
 Here Ansible has been used to deploy project in the developement environemnt.  Here as per different branch we have different appplication running.
 
-`ansible-playbook  -i hosts  playbook.yml  --private-key=~/Downloads/introday-candidate_2019-04-18.pem -u ubuntu  -e "image_name=bpain2010/apps:tradebyte-master-d2cac56b1f4573fc5bd7b7a31b4167ba44a68395" -e "apps_name=hellob" -e "apps_ports=8000" -e "published_port=8000"`
+`ansible-playbook  -i hosts  playbook.yml  --private-key=~/Downloads/introday-candidate_2019-04-18.pem -u ubuntu  -e "image_name=bpain2010/apps:tradebyte-master-d2cac56b1f4573fc5bd7b7a31b4167ba44a68395" -e "apps_name=dev-build" -e "apps_ports=8000" -e "published_port=32769"`
 
+
+`ansible-playbook  -i hosts  playbook.yml  --private-key=~/Downloads/introday-candidate_2019-04-18.pem -u ubuntu  -e "image_name=bpain2010/apps:tradebyte-master-d2cac56b1f4573fc5bd7b7a31b4167ba44a68395" -e "apps_name=master-build" -e "apps_ports=8000" -e "published_port=8000"`
 
 
 
