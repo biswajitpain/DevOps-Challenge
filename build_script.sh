@@ -21,6 +21,13 @@ if [ -z $2 ]; then
 
 fi
 
+echo "Check out to branch"
+
+git checkout ${1}
+if [ "$?" -ne "0" ] ; then
+echo "Provided branch is not available"
+exit 0
+fi
 
 echo "Running  Test  Cases"
 python  tests/test.py

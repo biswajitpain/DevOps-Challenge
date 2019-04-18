@@ -6,7 +6,10 @@ This is a bare minimum build and deploymemnt system which can be integrated with
 
 ## How it works
 
-This CI system designed keep in mind  for multiple developer and there different branch.
+This CI system designed keep in mind  for multiple developer and there different branch. Developer should pass there branch to the build system  and this build system 
+run the test cases on that branch  if test cases are passed then it will create a docker container and pushed it to the registry.
+
+`code-checkout --> Run Test cases --> Build Containers --> Pushed to Registry`
 
 ## Build 
 
