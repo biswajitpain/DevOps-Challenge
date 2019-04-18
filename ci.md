@@ -79,7 +79,7 @@ tradebyte-master-d2cac56b1f4573fc5bd7b7a31b4167ba44a68395: digest: sha256:55a194
 
 ```
 
-## container imgae 
+## Container Imgae 
 
 `<repository><git-branch><git-hash>`
 
@@ -94,14 +94,6 @@ Here Ansible has been used to deploy project in the developement environemnt.  H
 
 
 
+`http://18.194.164.2:32769/  ---> Dev environemnt`
 
-
-
-
-
-
-
-
-
-http://18.194.164.2:32769/  ---> Dev environemnt
-http://18.194.164.2:8000/  --->  Prod environemnt
+`http://18.194.164.2:8000/  --->  Prod environemnt`
