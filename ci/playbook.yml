@@ -1,0 +1,36 @@
+---
+- name: Install Redis
+  hosts: dev
+  tasks:
+
+    - name: Ensure Redis is present
+      apt: pkg=redis-server state=latest
+      become: yes
+
+    - name: Ensure Redis is started
+      service: name=redis-server state=started enabled=yes
+      become: yes
+
+    - name: copy envirinment file to destination path
+      copy:
+        src: ../.env
+        dest: /tmp/.env-dev
+        owner: ubuntu
+        group: ubuntu
+        mode: 0644
+
+    - name: Start a container using  env file
+      docker_container:
+        name: "{{ apps_name }}"
+        image: "{{image_name }}"
+        pull: yes
+        exposed_ports: "{{ apps_ports }}"
+        published_ports: "{{ published_port }}"
+        env_file: /tmp/.env-dev
+        ports:
+          - "{{ published_port }}:{{ apps_ports }}"
+  handlers:
+
+    - name: Redis Restart
+      service: name=redis-server state=restarted enabled=yes
+      sudo: true
